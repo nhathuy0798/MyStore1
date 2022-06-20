@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/views/contactView.jsp=UTF-8
+encoding//src/huy/mywebapp/filter/CookieFilter.java=UTF-8
+encoding//src/huy/mywebapp/servlet/CreateProductServlet.java=UTF-8
+encoding//src/huy/mywebapp/servlet/DetailProductServlet.java=UTF-8
+encoding//src/huy/mywebapp/servlet/EditProductServlet.java=UTF-8
+encoding//src/huy/mywebapp/servlet/HomeServlet.java=UTF-8
+encoding//src/huy/mywebapp/servlet/LoginServlet.java=UTF-8
+encoding//src/huy/mywebapp/servlet/ProductListServlet.java=UTF-8
+encoding//src/huy/mywebapp/servlet/RegisterUserServlet.java=UTF-8
+encoding//src/huy/mywebapp/servlet/UserInfoServlet.java=UTF-8

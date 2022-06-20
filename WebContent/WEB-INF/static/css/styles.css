@@ -1,0 +1,216 @@
+body,a{
+	font-size: 13px !important;
+}
+
+#footer_page {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+   background:#000000135206235;
+   padding-top: 5px;
+}
+
+#header-id{
+
+}
+
+#navbar ul a:hover{
+	color:red !important;
+}
+
+#login-form{
+	float:right;
+	color: silver;
+}
+
+.container-fluid{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+#navbar{
+	border-radius:0px !important;
+	margin-bottom: 0px !important;
+}
+
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+$red: #e74c3c;
+
+*, 
+*:before, 
+*:after {
+   @include box-sizing(border-box); 
+}
+
+html, body {
+  background: #f1f1f1;
+  font-family: 'Merriweather', sans-serif;
+  padding: 0em;
+}
+
+h1 {
+   text-align: center;
+   color: #a8a8a8;
+   @include text-shadow(1px 1px 0 rgba(white, 1));
+}
+
+form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+  
+  input, textarea {
+     border:0; outline:0;
+     padding: 1em;
+     @include border-radius(8px);
+     display: block;
+     width: 100%;
+     margin-top: 1em;
+     font-family: 'Merriweather', sans-serif;
+     @include box-shadow(0 1px 1px rgba(black, 0.1));
+     resize: none;
+    
+    &:focus {
+       @include box-shadow(0 0px 2px rgba($red, 1)!important);
+    }
+  }
+  
+  #input-submit {
+     color: white; 
+     background: $red;
+     cursor: pointer;
+    
+    &:hover {
+       @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6)); 
+    }
+  }
+  
+  textarea {
+      height: 126px;
+  }
+}
+
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+     margin-right: 2%; 
+}
+
+
+@media (max-width: 480px) {
+  .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+#create-product-form {
+	float: left;
+}
+
+#edit-product-form {
+	float: left;
+}
+
+#login{
+	float: left;
+}
+
+#login-form-1{
+	float: left;
+}
+
+table#table-product-list {
+    border-collapse: collapse;   
+}
+#image-list {
+    background-color: #eee;
+    border-top: 1px solid #fff;
+}
+#image-list:hover {
+    background-color: #ff8040;
+}
+#table-product-list th {
+    background-color: #fff;
+}
+#table-product-list th, #table-product-list td {
+    padding: 3px 5px;
+}
+#table-product-list td:hover {
+    cursor: pointer;
+}
+#image-edit{
+	width: 600px !important; 
+	height: 400px !important;
+}
+#image-list{
+	width:200px !important;
+	height:150px !important;
+}
+#index-img{
+	float: inherit;
+}
+#myCarousel {
+	height: 550px;
+}
+.carousel-inner img {
+	height: 550px !important;
+}
+
+#bestImage{
+	height: 330px !important;
+	width: 250px !important;
+}
+
+
+
+
+#thumbnail-img {
+    background-color: #eee;
+    border-top: 1px solid #fff;
+}
+#thumbnail-img:hover {
+    background-color: #ffc7ac;
+}
+#thumbnail-img img {
+    background-color: #fff;
+}
+#thumbnail-img img :hover {
+    cursor: pointer;
+}
+
+#table-product-list-tr{
+	/* background-color: #bdd9d3; */
+}
+
+#table-product-list-tr-title{
+	background-color: #88dbff;
+}
+
+a:hover{
+    color: #0000ff;
+    text-decoration: none;
+}
