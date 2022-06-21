@@ -24,15 +24,23 @@
 						<img id="bestImage" src="data:image/jpg;base64,${item.base64Image} "/>
 						<div class="caption">
 							<p class="group inner list-group-item-text">
-							ID: ${item.name}
+							Name: ${item.name}
 							</p>
 							<div class="row">
 								<div class="col-xs-12 col-md-8">
 									<p class="lead">${item.price} VND</p>
 								</div>
-								<div class="col-xs-12 col-md-4">
-									<a class="btn btn-success" href="detailProduct?id=${item.id}">Detail</a>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-3">
+									<a class="btn btn-success" href="detailProduct?id=${item.id}">Detail</a>									
 								</div>
+								<c:if test="${!loginedUser.role_admin}">
+									<div class="col-xs-12 col-md-3">
+										<c:url value="/addtoCart?id=${item.id}&page=home" var="addtoCart" />
+										<a class="btn btn-warning" href="${addtoCart}">Buy</a>
+									</div>
+								</c:if>
 							</div>
 						</div>
 					</div>

@@ -32,7 +32,7 @@ $(document).ready(function() {
 				<c:if test="${userLogined.role_admin}">
 				<a href="createProduct">
 					<img src="img/add-icon.png" width="30" height="30" id="add-icon"/>
-				</a><a href="createProduct">Create Product</a>
+				</a><a href="createProduct" id="create-link">Create Product</a>
 				</c:if>
 				<div class="table-wrapper-scroll-y my-custom-scrollbar">
 					<table class="table table-striped">
@@ -70,8 +70,10 @@ $(document).ready(function() {
 											class="btn btn-danger" role="button" onclick="return confirm('Are you sure you want to delete this item?');" ><span class="glyphicon glyphicon-remove"></span></a></td>
 									</c:if>
 									<c:if test="${!userLogined.role_admin}">
-										<td><a href="detailProduct?id=${item.id}"
-											class="btn btn-warning" role="button">Buy</a></td>
+										<td>
+											<c:url value="/addtoCart?id=${item.id}&page=productList" var="addtoCart" />
+											<a class="btn btn-warning" href="${addtoCart}">Buy</a>
+										</td>
 									</c:if>
 								</tr>
 							</c:forEach>

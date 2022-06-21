@@ -1,6 +1,7 @@
 package huy.mywebapp.dao;
 
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,6 +9,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.tomcat.util.codec.binary.Base64;
 
 import com.mysql.jdbc.StringUtils;
 
@@ -97,6 +100,16 @@ public class ProductDao {
 			boolean isBestSaler = rs.getInt("BestSaler") == 1? true : false ;
 			int type = rs.getInt("Type");
 			Product item = new Product(id, name, price, imageFileName, imageData, isBestSaler, type);
+			String FI;
+			try {
+				FI = new String(Base64.encodeBase64(item.getImageData()), "UTF-8");
+				String url = "data:image/jpg;base64," + FI;
+//				System.out.print(url);
+				item.setBase64Image(FI);
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}		
 			return item;
 		}
 		return null;

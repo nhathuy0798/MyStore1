@@ -12,6 +12,7 @@ public class Product {
     private String base64Image;
     private boolean bestSaler;
     private int type;
+    private int amountTotal;
      
 
     public Product() {
@@ -92,4 +93,12 @@ public class Product {
 		this.type = type;
 	}
 
+	public int getAmountTotal() {
+		return amountTotal;
+	}
+
+	public void setAmountTotal(int amountTotal) {
+		this.amountTotal = amountTotal;
+	}
+		
 }
