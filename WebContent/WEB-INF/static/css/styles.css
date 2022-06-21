@@ -219,7 +219,12 @@ table#table-product-list {
 #create-link:hover {
     color: #da031e;
     text-decoration: none;
-    font-size: 10px !important;
+    font-size: 15px !important;
+    font-style: oblique;
+}
+
+#create-button:hover {
+    text-decoration: none;
 }
 #managerment-id img {
 	max-height: 100px;
@@ -230,6 +235,5 @@ table#table-product-list {
 }
 
 #managerment-row-id .panel:hover{
-	border-color: #448888;
-	border-width: 3px;
+	opacity: 0.4;
 }

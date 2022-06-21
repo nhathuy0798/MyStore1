@@ -36,20 +36,20 @@ $(document).ready(function() {
 	  <div class="row" id="managerment-row-id">
 	    <div class="col-sm-4" id="user-manager">
 	      <div class="panel panel-primary">
-	        <div class="panel-heading">USER MANAGERMENT</div>
+	        <div class="panel-heading" id="panel-user-manager">USER MANAGERMENT</div>
 	        <div class="panel-body"><img src="img/user-icon.png" class="img-responsive" alt="Image"></div>
 	        <div class="panel-footer">Add, edit, delete User...</div>
 	      </div>
 	    </div>
 	    <div class="col-sm-4" id="product-manager">
-	      <div class="panel panel-danger">
+	      <div class="panel panel-danger" id="panel-product-manager">
 	        <div class="panel-heading">PRODUCT MANAGERMENT</div>
 	        <div class="panel-body"><img src="img/product-icon.png" class="img-responsive" alt="Image"></div>
 	        <div class="panel-footer">Add, edit, delete Product...</div>
 	      </div>
 	    </div>
 	    <div class="col-sm-4" id="order-manager">
-	      <div class="panel panel-success">
+	      <div class="panel panel-success" id="panel-order-manager">
 	        <div class="panel-heading">ORDER MANAGERMENT</div>
 	        <div class="panel-body"><img src="img/order-icon.png" class="img-responsive" alt="Image"></div>
 	        <div class="panel-footer">Add, edit, delete Order...</div>

@@ -30,9 +30,9 @@ $(document).ready(function() {
 		 <div id="list-column" class="col-sm-9">
 		 	<h3>Product List (${productCount}) </h3>
 				<c:if test="${userLogined.role_admin}">
-				<a href="createProduct">
-					<img src="img/add-icon.png" width="30" height="30" id="add-icon"/>
-				</a><a href="createProduct" id="create-link">Create Product</a>
+					<a href="createProduct" id="create-button">
+						<img src="img/add-icon1.png" width="30" height="30" id="add-icon"/>
+					</a><a href="createProduct" id="create-link">Create Product</a>
 				</c:if>
 				<div class="table-wrapper-scroll-y my-custom-scrollbar">
 					<table class="table table-striped">
