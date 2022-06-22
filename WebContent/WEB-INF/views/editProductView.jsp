@@ -1,18 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
-<html>
-   <head>
-      <meta charset="UTF-8">
-      <title>Edit Product</title>
-      <script type="text/javascript" src="js/validateInput.js"></script>
-   </head>
-   <body>
-
-      <jsp:include page="_header.jsp"></jsp:include>
-
-      <h3>Edit Product</h3>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://kwonnam.pe.kr/jsp/template-inheritance" prefix="layout" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<layout:extends name="baseView2.jsp">
+	 <script type="text/javascript" src="js/validateInput.js"></script>
+    <layout:put block="title">Edit Product</layout:put>
+    
+    <layout:put block="body">
+    	<h3>Edit Product</h3>
 
       <p style="color: red;">${errorString}</p>
 
@@ -50,7 +45,7 @@
 	            </tr>	            
 	          </table>
 	          <br>
-	         <label for="bestSaler" class="text-info"><span>Best Saler</span>Â <span><input name="bestSaler" id="bestSaler" type="checkbox" <c:if test="${product.bestSaler}">checked=checked</c:if> value= "Y"></span></label><br>
+	         <label for="bestSaler" class="text-info"><span>Best Saler</span> <span><input name="bestSaler" id="bestSaler" type="checkbox" <c:if test="${product.bestSaler}">checked=checked</c:if> value= "Y"></span></label><br>
 	         <br>
 	         <div class="form-group">		                      
 	             <input type="submit" name="submit" class="btn btn-info btn-md" onclick="validateEditProduct()" value="Update">
@@ -63,7 +58,5 @@
 	       </div>
        </div>
       </c:if>
-      <jsp:include page="_footer.jsp"></jsp:include>
-
-   </body>
-</html>
+    </layout:put>
+</layout:extends>	

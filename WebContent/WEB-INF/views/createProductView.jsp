@@ -1,20 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
-<!DOCTYPE html>
-<html>
-   <head>
-      <meta charset="UTF-8">
-      <title>Create Product</title>
-   </head>
-   <body>
-   
-      <jsp:include page="_header.jsp"></jsp:include>
-      
-      <h3>Create Product</h3>
-      
-      <p style="color: red;">${errorString}</p>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://kwonnam.pe.kr/jsp/template-inheritance" prefix="layout" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<layout:extends name="baseView2.jsp">
+    <layout:put block="title">Create Product</layout:put>
+    
+    <layout:put block="body">
+   	  <h3>Create Product</h3>
       
       <form id="create-product-form" method="POST" action="${pageContext.request.contextPath}/createProduct" enctype='multipart/form-data'>
          <table border="0">
@@ -49,15 +41,12 @@
             </tr>     
          </table>
          <br>
-         <label for="bestSaler" class="text-info"><span>Best Saler</span>Â <span><input name="bestSaler" type="checkbox" value= "Y"></span></label><br>
+         <label for="bestSaler" class="text-info"><span>Best Saler</span> <span><input name="bestSaler" type="checkbox" value= "Y"></span></label><br>
          <br>
          <div class="form-group">		                      
              <input type="submit" name="submit" class="btn btn-info btn-md" value="Create">
              <a href="productList" class="btn btn-danger" role="button">Cancel</a>	
          </div>	
       </form>
-      
-      <jsp:include page="_footer.jsp"></jsp:include>
-      
-   </body>
-</html>
+    </layout:put>
+</layout:extends>

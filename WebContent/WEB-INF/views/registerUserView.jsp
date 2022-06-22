@@ -1,21 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
-<html>
-   <head>
-      <meta charset="UTF-8">
-      <title>Register</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/validateInput.js"></script>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://kwonnam.pe.kr/jsp/template-inheritance" prefix="layout" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<layout:extends name="baseView2.jsp">
+	 <script type="text/javascript" src="js/validateInput.js"></script>
+    <layout:put block="title">Register</layout:put>
     
-   </head>
-   <body>
-      <jsp:include page="_header.jsp"></jsp:include>
-
-		<div id="login">
+    <layout:put block="body">
+    	<div id="login">
 		    <div class="container">
 		        <div id="login-row" class="row justify-content-center align-items-center">
 		            <div id="login-column" class="col-md-6">
@@ -40,7 +32,7 @@
 		                            <input type="password" name="repassword" id="repassword" class="form-control">
 		                        </div>
 		                        <c:if test="${userLogined.role_admin}">
-		                        	<label for="remember-me" class="text-info"><span>Create Admin Role:</span>Â <span><input id="role_admin" name="role_admin" type="checkbox" value= "Y"></span></label><br>
+		                        	<label for="remember-me" class="text-info"><span>Create Admin Role:</span> <span><input id="role_admin" name="role_admin" type="checkbox" value= "Y"></span></label><br>
 	                        	</c:if>
 		                        <div class="form-group">		                      
 		                            <input type="submit" name="submit" onclick=" return validateRegister()" class="btn btn-info btn-md" value="Register">
@@ -51,7 +43,6 @@
 		            </div>
 		        </div>
 		    </div>
-	  </div>	
-      <jsp:include page="_footer.jsp"></jsp:include>
-   </body>
-</html>
+	  </div>
+    </layout:put>
+</layout:extends>

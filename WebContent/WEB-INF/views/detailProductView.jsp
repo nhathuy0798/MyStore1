@@ -1,12 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Product Detail</title>
-</head>
-<body>
-DETAIL
-</body>
-</html>
+<%@taglib uri="http://kwonnam.pe.kr/jsp/template-inheritance" prefix="layout" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<layout:extends name="baseView2.jsp">
+    <layout:put block="title">Detail Product</layout:put>
+    
+    <layout:put block="body">	
+ 	</layout:put>
+</layout:extends>

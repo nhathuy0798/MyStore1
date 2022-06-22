@@ -1,21 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-   <head>
-      <meta charset="UTF-8">
-      <title>Login</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <%-- <script><%@include file="/WEB-INF/static/js/validateInput.js"%></script>  --%>
-    <script type="text/javascript" src="js/validateInput.js"></script>
-
-   </head>
-   <body>
-      <jsp:include page="_header.jsp"></jsp:include>
-
-		<div id="login-form-1">
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://kwonnam.pe.kr/jsp/template-inheritance" prefix="layout" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<layout:extends name="baseView2.jsp">
+	 <script type="text/javascript" src="js/validateInput.js"></script>
+    <layout:put block="title">Login</layout:put>
+    
+    <layout:put block="body">
+    	<div id="login-form-1">
 		    <div class="container">
 		        <div id="login-row" class="row justify-content-center align-items-center">
 		            <div id="login-column" class="col-sm-6">
@@ -31,7 +23,7 @@
 		                            <input type="password" name="password" id="password" class="form-control" value= "${user.password}">
 		                        </div>
 		                        <div class="form-group">
-		                            <label for="remember-me" class="text-info"><span>Remember me</span>Â <span><input id="remember-me" name="remember-me" type="checkbox" value= "Y"></span></label><br>
+		                            <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox" value= "Y"></span></label><br>
 		                            <input type="submit" name="submit" onclick="validateLogin()" class="btn btn-info btn-md" value="Login">
 		                            <a href="${pageContext.request.contextPath}/" class="btn btn-danger" role="button">Cancel</a>	
 		                        </div>
@@ -48,6 +40,5 @@
 		        </div>
 		    </div>
 	  </div>	
-      <jsp:include page="_footer.jsp"></jsp:include>
-   </body>
-</html>
+    </layout:put>
+</layout:extends>

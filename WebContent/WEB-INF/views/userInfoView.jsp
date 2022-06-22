@@ -1,22 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
- pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
- <head>
-    <meta charset="UTF-8">
-    <title>User Info</title>
- </head>
- <body>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://kwonnam.pe.kr/jsp/template-inheritance" prefix="layout" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<layout:extends name="baseView2.jsp">
+    <layout:put block="title">Home</layout:put>
+    <layout:put block="body">
+    	<h3>Hello: ${user.userName}</h3>
 
-    <jsp:include page="_header.jsp"></jsp:include>
-
-    <h3>Hello: ${user.userName}</h3>
-
-    User Name: <b>${user.userName}</b>
-    <br />
-    Gender: ${user.gender } <br />
-
-    <jsp:include page="_footer.jsp"></jsp:include>
-
- </body>
-</html>
+	    User Name: <b>${user.userName}</b>
+	    <br />
+	    Gender: ${user.gender } <br />
+    	
+    </layout:put>
+</layout:extends>
