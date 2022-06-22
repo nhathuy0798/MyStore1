@@ -14,7 +14,7 @@
 			    });
 			    
 			    $('#product-manager .panel').click(function() {
-			        var url = "${pageContext.request.contextPath}/productList";
+		        var url = "${pageContext.request.contextPath}/productList";
 			        window.location.assign(url);
 			    });
 			    
