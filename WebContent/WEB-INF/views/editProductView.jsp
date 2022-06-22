@@ -3,11 +3,11 @@
 <%@taglib uri="http://kwonnam.pe.kr/jsp/template-inheritance" prefix="layout" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <layout:extends name="baseView2.jsp">
-	 <script type="text/javascript" src="js/validateInput.js"></script>
     <layout:put block="title">Edit Product</layout:put>
     
     <layout:put block="body">
-    	<h3>Edit Product</h3>
+     <script type="text/javascript" src="js/validateInput.js"></script>
+     <h3>Edit Product</h3>
 
       <p style="color: red;">${errorString}</p>
 
@@ -48,7 +48,7 @@
 	         <label for="bestSaler" class="text-info"><span>Best Saler</span> <span><input name="bestSaler" id="bestSaler" type="checkbox" <c:if test="${product.bestSaler}">checked=checked</c:if> value= "Y"></span></label><br>
 	         <br>
 	         <div class="form-group">		                      
-	             <input type="submit" name="submit" class="btn btn-info btn-md" onclick="validateEditProduct()" value="Update">
+	             <input type="submit" name="submit" class="btn btn-info btn-md" onclick="return validateEditProduct()" value="Update">
 	             <a href="productList" class="btn btn-danger" role="button">Cancel</a>	
 	         </div>	
 	         </form>

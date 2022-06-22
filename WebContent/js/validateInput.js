@@ -59,7 +59,7 @@ $(document).ready(function(){
 			isvalidate = false;
 		} else if( price < 0 ){
 			alert("Price is less more than zero");
-			$("#gender").focus();
+			$("#price").focus();
 			isvalidate = false;
 		} 
 		return isvalidate;

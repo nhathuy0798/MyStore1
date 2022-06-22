@@ -3,10 +3,10 @@
 <%@taglib uri="http://kwonnam.pe.kr/jsp/template-inheritance" prefix="layout" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <layout:extends name="baseView2.jsp">
-	 <script type="text/javascript" src="js/validateInput.js"></script>
     <layout:put block="title">Login</layout:put>
     
     <layout:put block="body">
+    <script type="text/javascript" src="js/validateInput.js"></script>
     	<div id="login-form-1">
 		    <div class="container">
 		        <div id="login-row" class="row justify-content-center align-items-center">
@@ -24,7 +24,7 @@
 		                        </div>
 		                        <div class="form-group">
 		                            <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox" value= "Y"></span></label><br>
-		                            <input type="submit" name="submit" onclick="validateLogin()" class="btn btn-info btn-md" value="Login">
+		                            <input type="submit" name="submit" onclick="return validateLogin()" class="btn btn-info btn-md" value="Login">
 		                            <a href="${pageContext.request.contextPath}/" class="btn btn-danger" role="button">Cancel</a>	
 		                        </div>
 		                        <div id="register-link" class="text-right">

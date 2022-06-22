@@ -3,10 +3,10 @@
 <%@taglib uri="http://kwonnam.pe.kr/jsp/template-inheritance" prefix="layout" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <layout:extends name="baseView2.jsp">
-	 <script type="text/javascript" src="js/validateInput.js"></script>
     <layout:put block="title">Register</layout:put>
     
     <layout:put block="body">
+    <script type="text/javascript" src="js/validateInput.js"></script>
     	<div id="login">
 		    <div class="container">
 		        <div id="login-row" class="row justify-content-center align-items-center">
